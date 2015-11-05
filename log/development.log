@@ -1093,3 +1093,69 @@ Processing by MoviesController#index as HTML
   [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG')  ORDER BY release_date
   Rendered movies/index.html.haml within layouts/application (3.5ms)
 Completed 200 OK in 34ms (Views: 32.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 152.15.113.5 at 2015-11-05 01:25:51 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/railties-4.2.1/lib/rails/templates/rails/welcome/index.html.erb (2.7ms)
+Completed 200 OK in 25ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies" for 152.15.113.5 at 2015-11-05 01:25:55 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY id
+  Rendered movies/index.html.haml within layouts/application (21.2ms)
+Completed 200 OK in 336ms (Views: 320.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/default.self-49554e9e270baee081b10069c4f5f33b75f6549ad240aac134400c56d752bf9f.css?body=1" for 152.15.113.5 at 2015-11-05 01:25:56 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-287b7e64d724507af95e86d12588a1cce5c7cd0744f40b17e09e9b664723a617.css?body=1" for 152.15.113.5 at 2015-11-05 01:25:56 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 152.15.113.5 at 2015-11-05 01:25:56 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 152.15.113.5 at 2015-11-05 01:25:56 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/movies?sort_by=title" for 152.15.113.5 at 2015-11-05 01:25:59 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"title"}
+Redirected to https://mabercr4-mabercr41.c9.io/movies?ratings%5B%5D=G&ratings%5B%5D=PG&ratings%5B%5D=PG-13&ratings%5B%5D=R&sort_by=title
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5B%5D=G&ratings%5B%5D=PG&ratings%5B%5D=PG-13&ratings%5B%5D=R&sort_by=title" for 152.15.113.5 at 2015-11-05 01:25:59 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["G", "PG", "PG-13", "R"], "sort_by"=>"title"}
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY title[0m
+  Rendered movies/index.html.haml within layouts/application (12.5ms)
+Completed 200 OK in 61ms (Views: 58.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?sort_by=release_date" for 152.15.113.5 at 2015-11-05 01:26:00 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"sort_by"=>"release_date"}
+Redirected to https://mabercr4-mabercr41.c9.io/movies?ratings%5B%5D=G&ratings%5B%5D=PG&ratings%5B%5D=PG-13&ratings%5B%5D=R&sort_by=release_date
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/movies?ratings%5B%5D=G&ratings%5B%5D=PG&ratings%5B%5D=PG-13&ratings%5B%5D=R&sort_by=release_date" for 152.15.113.5 at 2015-11-05 01:26:00 +0000
+Cannot render console from 152.15.113.5! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>["G", "PG", "PG-13", "R"], "sort_by"=>"release_date"}
+  [1m[35mMovie Load (0.8ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY release_date
+  Rendered movies/index.html.haml within layouts/application (8.2ms)
+Completed 200 OK in 68ms (Views: 55.8ms | ActiveRecord: 0.8ms)
